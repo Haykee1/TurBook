@@ -5,7 +5,7 @@ const Booking = require("./models/Booking");
 const User = require("./models/User");
 require("dotenv").config();
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const bookingDetails = require("./data/bookingDetails.json");
 
 const app = express();
