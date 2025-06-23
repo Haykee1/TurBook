@@ -21,20 +21,14 @@ mongoose
   .then(() => {
     console.log("Connected to MongoDB");
     console.log("Connected DB:", mongoose.connection.name);
+    app.listen(PORT, () => {
+      console.log(`The network is on localhost::/${PORT}`);
+    });
   })
   .catch((err) => console.log(err));
 
-async function reset() {
-  await Booking.deleteMany({});
-  await User.deleteMany({});
-}
-reset();
 const authRoutes = require("./routes/Authentication");
 app.use("/api/booking", authRoutes);
 
 const bookRoutes = require("./routes/BookingRoute");
 app.use("/api/booking/", bookRoutes);
-
-app.listen(PORT, () => {
-  console.log(`The network is on localhost::/${PORT}`);
-});
