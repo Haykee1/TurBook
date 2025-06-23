@@ -1,10 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
 import HomePage from "./component/HomePage";
 import ResultsPage from "./component/ResultsPage";
-import LoginPage from "./component/LoginPage";
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom"; // import Navigate
 
 function App() {
   const [flights, setFlight] = useState([]);
@@ -19,6 +22,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Navigate to="/TurBook" />} />
         <Route path="/TurBook" element={<HomePage flights={flights} />} />
         <Route
           path="/TurBook/Results"
