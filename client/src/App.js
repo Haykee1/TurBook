@@ -13,7 +13,7 @@ function App() {
   const [flights, setFlight] = useState([]);
 
   useEffect(() => {
-    fetch("https://turbook.onrender.com//api/booking")
+    fetch("https://turbook.onrender.com/api/booking")
       .then((response) => response.json())
       .then((data) => setFlight(data))
       .catch((err) => console.error("API Error: ", err));

@@ -13,7 +13,7 @@ function LoginPage({ setLoginPage, setRegisterPage, setIsLoggedIn }) {
 
     try {
       const res = await axios.post(
-        "https://turbook.onrender.com//api/booking/login",
+        "https://turbook.onrender.com/api/booking/login",
         {
           email,
           password,

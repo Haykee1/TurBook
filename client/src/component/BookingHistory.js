@@ -10,7 +10,7 @@ function BookingHistory({ setBookingHistory }) {
 
       try {
         const res = await axios.get(
-          "http://localhost:4000/api/booking/bookingHistory",
+          "https://turbook.onrender.com/api/booking/bookingHistory",
           {
             headers: {
               Authorization: `Bearer ${token}`,
