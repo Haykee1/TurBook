@@ -1,0 +1,121 @@
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+  z-index: 79; /* Below the sidebar */
+}
+
+.profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  z-index: 80;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+.slide-in {
+  animation: sidebarSlideIn 0.3s ease-out forwards;
+}
+.slide-out {
+  animation: sidebarSlideOut 0.3s ease-out forwards;
+}
+
+@keyframes sidebarSlideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes sidebarSlideOut {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.profile-sidebar button {
+  width: 100%;
+  height: 45px;
+  background-color: chartreuse;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  font-size: 17px;
+}
+.profile-sidebar p {
+  font-size: 17px;
+  margin-top: 2px;
+}
+
+.profile-sidebar-first-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.4px solid chartreuse;
+  margin-top: -10px;
+}
+
+.profile-sidebar-first-row button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  width: 30px;
+  height: 30px;
+  color: black;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.profile-sidebar-third-row {
+  display: flex;
+  width: 100%;
+  height: min-content;
+  margin-top: 20px;
+}
+
+.profile-sidebar-third-row p {
+  font-size: 17px;
+}
+
+.profile-sidebar-third-row button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  width: 100px;
+  height: 20px;
+  color: black;
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.profile-sidebar-third-row button:hover {
+  color: chartreuse;
+  background: none;
+}
+
+.profile-sidebar-fourth-row {
+  display: flex;
+  border-bottom: 0.4px solid chartreuse;
+}
+
+.profile-sidebar-fourth-row button {
+  width: 100%;
+  background: chartreuse;
+  border: none;
+  color: white;
+  justify-self: start;
+}

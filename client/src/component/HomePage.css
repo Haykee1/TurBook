@@ -1,0 +1,259 @@
+/*Layout css*/
+
+.home-header-layout {
+  display: flex;
+  width: 100%;
+  height: min-content;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.home-text-layout {
+  display: flex;
+  width: 75%;
+  height: min-content;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.3px solid chartreuse;
+}
+
+.home-text-layout p {
+  font-size: 13px;
+}
+
+.home-text-layout button {
+  color: chartreuse;
+  font-size: 15px;
+  background: none;
+  border: none;
+}
+
+.home-text-layout button:hover {
+  color: greenyellow;
+  background: none;
+}
+
+.home-option-layout {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  width: 75%;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-option-layout-right {
+  display: flex;
+  gap: 40px;
+}
+
+.home-option-layout-right button {
+  position: relative;
+  padding: 10px;
+  font-size: 1rem;
+  font-style: bold;
+  border: none;
+  background: none;
+  padding-bottom: 3px;
+  color: chartreuse;
+}
+.home-option-layout-right button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: chartreuse;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.home-option-layout-right button:hover {
+  color: greenyellow;
+}
+.home-option-layout-right button:hover:after {
+  transform: translateY(8px);
+}
+
+.background-image-layout {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: min-content;
+  overflow: hidden;
+}
+
+.background-image-layout h1 {
+  color: rgb(0, 253, 59);
+  position: absolute;
+  top: 18%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+.background-image-layout p {
+  font-size: 30px;
+  color: rgb(74, 243, 114);
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.home-form-search-layout {
+  display: flex;
+  width: 75%;
+  height: min-content;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 91%;
+  left: 50%;
+}
+
+.home-form-search {
+  display: flex;
+  width: 100%;
+  height: 70px;
+}
+.home-form-search input {
+  width: 25%;
+  height: 100%;
+  box-sizing: border-box;
+  border-start-start-radius: 5px;
+}
+
+.home-form-search button {
+  width: 25%;
+  height: 100%;
+  background: chartreuse;
+  box-sizing: border-box;
+  border-start-end-radius: 5px;
+  border-end-end-radius: 5px;
+}
+
+.home-form-search button:hover {
+  background: greenyellow;
+}
+
+.destination-place-card-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.destination-place-card-layout p {
+  font-size: 20px;
+}
+
+.flight-place-card-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.flight-place-card-layout p {
+  font-size: 20px;
+}
+/*Card css*/
+
+.destination-place-card {
+  width: 50%;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.flight-place-card {
+  width: 50%;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+/*Image css*/
+
+.background-image {
+  width: 100%;
+  height: 500px;
+  transform-origin: center;
+  display: block;
+  object-fit: cover;
+}
+
+.popular-place-image {
+  width: 100%;
+  height: 400px;
+  display: block;
+}
+
+/*Text css*/
+
+.trademark-text {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+/*Label css*/
+.depart-label {
+  position: absolute;
+  left: 51%;
+  top: 10%;
+  transform: translateY(-50%);
+  color: chartreuse;
+  pointer-events: none; /* <== prevents clicks */
+  font-size: 16px;
+}
+/*Input css*/
+
+.destination-input {
+  width: 25%;
+  height: 60px;
+  border-radius: 3px;
+}
+/*Button css*/
+
+.login-button {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  bottom: -4px;
+}
+
+.login-button:hover {
+  color: chartreuse;
+}
+
+.option-button {
+  font-size: 20px;
+  border: none;
+  background: none;
+  text-decoration: underline;
+  bottom: -4px;
+}
+
+.option-button:hover {
+  color: chartreuse;
+}
+
+.search-button {
+  width: 25%;
+  height: 63px;
+  border-radius: 3px;
+  background-color: chartreuse;
+}
+
+.search-button:hover {
+  background-color: rgba(128, 255, 0, 0.501);
+}

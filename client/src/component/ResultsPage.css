@@ -1,0 +1,235 @@
+button:hover {
+  cursor: pointer;
+}
+
+.turbook-logo {
+  width: 130px;
+  height: 50%;
+  margin-left: 5px;
+}
+
+.header-layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: min-content;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-layout > * {
+  border-bottom: 0.3px solid chartreuse;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.option-layout {
+  display: flex;
+  width: 75%;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.option-layout-right {
+  display: flex;
+  gap: 40px;
+}
+
+.option-layout-right button {
+  position: relative;
+  padding: 10px;
+  font-size: 1rem;
+  font-style: bold;
+  border: none;
+  background: none;
+  padding-bottom: 3px;
+  color: chartreuse;
+}
+.option-layout-right button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: chartreuse;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.option-layout-right button:hover {
+  color: greenyellow;
+}
+.option-layout-right button:hover:after {
+  transform: translateY(8px);
+}
+
+.destination-layout {
+  display: flex;
+  width: 75%;
+  justify-content: flex-start;
+}
+
+.destination-layout p {
+  margin-left: 20px;
+}
+
+.results-form-search-layout {
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  border: none;
+  background: white;
+}
+
+.results-form-search {
+  width: 75%;
+  height: 80%;
+}
+.results-form-search input {
+  width: 25%;
+  height: 100%;
+  box-sizing: border-box;
+  border-start-start-radius: 5px;
+}
+
+.results-form-search button {
+  width: 25%;
+  height: 100%;
+  background: chartreuse;
+  box-sizing: border-box;
+  border-start-end-radius: 5px;
+  border-end-end-radius: 5px;
+}
+
+.form-search button:hover {
+  background: greenyellow;
+}
+
+.body-layout {
+  display: grid;
+  min-height: 100vh;
+  grid-auto-rows: max-content;
+  grid-template-columns: minmax(200px, 75%);
+  justify-content: center;
+  row-gap: 20px;
+  background: rgb(228, 245, 224);
+}
+
+.body-filter-layout {
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  gap: 10px;
+  margin-top: 25px;
+  background: white;
+}
+
+.body-filter-layout button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.body-result-layout {
+  display: grid;
+  border-radius: 8px;
+  grid-template-rows: 300px;
+  grid-template-columns: minmax(300px, 45%) minmax(300px, 55%);
+  row-gap: 20px;
+  background: white;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.body-result-layout.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.body-result-layout.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.body-result-layout:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.body-result-image {
+  width: 100%;
+  height: 100%;
+}
+
+.body-result-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.body-result-details {
+  display: grid;
+  grid-template-rows: repeat(6, 16%);
+  grid-template-columns: 100%;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.result-details-first-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.result-details-first-row p {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.result-details-company {
+  justify-self: flex-start;
+}
+
+.result-details-company p {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.result-details-fifth-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.result-details-fifth-row p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.result-details-book {
+  width: 30%;
+  height: 100%;
+  border-radius: 10px;
+  justify-self: center;
+  background-color: chartreuse;
+}
+.result-details-logo {
+  width: 70px;
+  height: 100%;
+}
+
+.result-details-price {
+  width: 100px;
+  height: 100%;
+}
