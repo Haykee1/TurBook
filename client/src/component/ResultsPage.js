@@ -65,7 +65,7 @@ function ResultsPage({ flights }) {
 
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/booking/bookingDetails",
+        "https://turbook.onrender.com//api/booking/bookingDetails",
         {
           company: selectedFlight.company,
           from: selectedFlight.from,

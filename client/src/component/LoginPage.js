@@ -12,10 +12,13 @@ function LoginPage({ setLoginPage, setRegisterPage, setIsLoggedIn }) {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:4000/api/booking/login", {
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://turbook.onrender.com//api/booking/login",
+        {
+          email,
+          password,
+        }
+      );
       console.log(res.data.token);
       alert("User succesfully log in");
       setIsLoggedIn(true);

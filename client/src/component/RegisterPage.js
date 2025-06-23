@@ -13,7 +13,7 @@ function RegisterPage({ setLoginPage, setRegisterPage }) {
 
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/booking/register",
+        "https://turbook.onrender.com//api/booking/register",
         {
           username,
           email,
